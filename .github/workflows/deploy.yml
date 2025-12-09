@@ -25,3 +25,5 @@ jobs:
           app_location: "/"
           api_location: "api"
           output_location: "dist/valhalla/browser" # Specific for Angular 18+
+          app_build_command: "pnpm install && pnpm build"
+          api_build_command: "pnpm install && pnpm build"

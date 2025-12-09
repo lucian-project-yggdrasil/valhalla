@@ -17,6 +17,7 @@
 	},
 	"dependencies": {
 		"@azure/functions": "^4.0.0",
+		"@lucian/runes": "github:lucian-project-yggdrasil/runes#main",
 		"zod": "^4.1.13"
 	},
 	"devDependencies": {
