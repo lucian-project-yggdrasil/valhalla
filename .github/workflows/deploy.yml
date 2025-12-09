@@ -1,0 +1,27 @@
+name: Deploy Valhalla
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build_and_deploy_job:
+    runs-on: ubuntu-latest
+    name: Build and Deploy
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      # SWA Action handles the build using Oryx
+      # We just need to tell it where things are
+      - name: Build And Deploy
+        id: builddeploy
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.DEPLOY_TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          action: "upload"
+          app_location: "/"
+          api_location: "api"
+          output_location: "dist/valhalla/browser" # Specific for Angular 18+

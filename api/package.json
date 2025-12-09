@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "valhalla-api",
   "version": "1.0.0",
   "description": "",
   "main": "dist/src/functions/*.js",
@@ -11,12 +11,15 @@
     "start": "func start",
     "test": "echo \"No tests yet...\""
   },
+  "engines": {
+    "node": ">=20"
+  },
   "dependencies": {
     "@azure/functions": "^4.0.0"
   },
   "devDependencies": {
     "azure-functions-core-tools": "^4.x",
-    "@types/node": "18.x",
+    "@types/node": "^20.x",
     "typescript": "^4.0.0",
     "rimraf": "^5.0.0"
   }
