@@ -1,0 +1,24 @@
+{
+	"tabWidth": 2,
+	"useTabs": true,
+	"singleQuote": false,
+	"semi": false,
+	"bracketSameLine": false,
+	"bracketSpacing": true,
+	"arrowParens": "avoid",
+	"trailingComma": "all",
+	"endOfLine": "lf",
+	"htmlWhitespaceSensitivity": "css",
+	"jsxSingleQuote": false,
+	"quoteProps": "as-needed",
+	"printWidth": 100,
+	"plugins": ["prettier-plugin-organize-imports"],
+	"overrides": [
+		{
+			"files": "*.html",
+			"options": {
+				"parser": "angular"
+			}
+		}
+	]
+}

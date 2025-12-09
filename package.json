@@ -1,48 +1,46 @@
 {
-  "name": "valhalla",
-  "version": "1.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "link:runes": "pnpm link --global @lucian/runes"
-  },
-  "prettier": {
-    "printWidth": 100,
-    "singleQuote": true,
-    "overrides": [
-      {
-        "files": "*.html",
-        "options": {
-          "parser": "angular"
-        }
-      }
-    ]
-  },
-  "private": true,
-  "packageManager": "pnpm@10.25.0",
-  "engines": {
-    "node": ">=20"
-  },
-  "dependencies": {
-    "@angular/common": "^21.0.0",
-    "@angular/compiler": "^21.0.0",
-    "@angular/core": "^21.0.0",
-    "@angular/forms": "^21.0.0",
-    "@angular/platform-browser": "^21.0.0",
-    "@angular/router": "^21.0.0",
-    "@lucian/runes": "github:lucian-project-yggdrasil/runes#main",
-    "rxjs": "~7.8.0",
-    "tslib": "^2.3.0"
-  },
-  "devDependencies": {
-    "@angular/build": "^21.0.2",
-    "@angular/cli": "^21.0.2",
-    "@angular/compiler-cli": "^21.0.0",
-    "jsdom": "^27.1.0",
-    "typescript": "~5.9.2",
-    "vitest": "^4.0.8"
-  }
+	"name": "valhalla",
+	"version": "1.0.0",
+	"scripts": {
+		"ng": "ng",
+		"start": "ng serve",
+		"build": "ng build",
+		"watch": "ng build --watch --configuration development",
+		"test": "ng test",
+		"link:runes": "pnpm link --global @lucian/runes",
+		"lint": "ng lint"
+	},
+	"private": true,
+	"packageManager": "pnpm@10.25.0",
+	"engines": {
+		"node": ">=20"
+	},
+	"dependencies": {
+		"@angular/common": "^21.0.0",
+		"@angular/compiler": "^21.0.0",
+		"@angular/core": "^21.0.0",
+		"@angular/forms": "^21.0.0",
+		"@angular/platform-browser": "^21.0.0",
+		"@angular/router": "^21.0.0",
+		"@lucian/runes": "github:lucian-project-yggdrasil/runes#main",
+		"rxjs": "~7.8.0",
+		"tslib": "^2.3.0"
+	},
+	"devDependencies": {
+		"@angular-eslint/builder": "21.1.0",
+		"@angular/build": "^21.0.2",
+		"@angular/cli": "^21.0.2",
+		"@angular/compiler-cli": "^21.0.0",
+		"@eslint/js": "^9.39.1",
+		"angular-eslint": "21.1.0",
+		"eslint": "^9.39.1",
+		"eslint-config-prettier": "^10.1.8",
+		"eslint-plugin-prettier": "^5.5.4",
+		"jsdom": "^27.1.0",
+		"prettier": "^3.7.4",
+		"prettier-plugin-organize-imports": "^4.3.0",
+		"typescript": "~5.9.2",
+		"typescript-eslint": "8.47.0",
+		"vitest": "^4.0.8"
+	}
 }
