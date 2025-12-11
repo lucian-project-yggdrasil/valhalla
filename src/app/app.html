@@ -1,38 +1,9 @@
 <div class="container">
 	<header>
 		<h1>Valhalla CRM</h1>
-		<span class="badge">Zod Protected</span>
+		<span class="badge">AI Enabled</span>
 	</header>
 
-	<section class="add-friend-section">
-		<div class="input-group">
-			<input
-				[(ngModel)]="newFriendName"
-				placeholder="Name (Required)"
-				(keydown.enter)="addFriend()"
-			/>
-			<button (click)="addFriend()">Add Friend</button>
-		</div>
-
-		@if (errorMessage()) {
-			<div class="error-msg">{{ errorMessage() }}</div>
-		}
-	</section>
-
-	<section class="list-section">
-		<button class="refresh-btn" (click)="loadFriends()">Refresh List</button>
-
-		<ul>
-			@for (friend of friends(); track friend.id) {
-				<li class="friend-card">
-					<span class="name">{{ friend.name }}</span>
-					<span class="status" [class]="friend.status.toLowerCase()">
-						{{ friend.status }}
-					</span>
-				</li>
-			} @empty {
-				<li class="empty-state">No friends recorded in Valhalla.</li>
-			}
-		</ul>
-	</section>
+	<app-add-friend />
+	<app-friend-list />
 </div>

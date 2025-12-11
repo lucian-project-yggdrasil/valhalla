@@ -17,10 +17,14 @@
 	},
 	"dependencies": {
 		"@azure/functions": "^4.0.0",
+		"@azure/openai": "^2.0.0",
 		"@lucian/runes": "github:lucian-project-yggdrasil/runes#main",
+		"luxon": "^3.7.2",
+		"openai": "^6.10.0",
 		"zod": "^4.1.13"
 	},
 	"devDependencies": {
+		"@types/luxon": "^3.7.1",
 		"@types/node": "^20.x",
 		"rimraf": "^5.0.0",
 		"typescript": "^5.9.3"

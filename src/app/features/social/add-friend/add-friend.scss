@@ -1,0 +1,77 @@
+.scan-area {
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+.btn-scan {
+	display: inline-block;
+	background: linear-gradient(135deg, #6200ea, #b00020); /* Odin's Colors */
+	color: white;
+	padding: 12px 24px;
+	border-radius: 8px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: transform 0.2s;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+	&:hover {
+		transform: translateY(-2px);
+	}
+
+	&.disabled {
+		opacity: 0.7;
+		cursor: wait;
+	}
+}
+
+.form-grid {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	background: #1e1e1e;
+	padding: 1rem;
+	border-radius: 8px;
+	border: 1px solid #333;
+
+	input,
+	textarea {
+		padding: 10px;
+		background: #2c2c2c;
+		border: 1px solid #444;
+		color: white;
+		border-radius: 4px;
+		font-family: inherit;
+
+		&:focus {
+			outline: 2px solid #bb86fc;
+		}
+
+		&[placeholder^="Facts"] {
+			background: #252526;
+			border-color: #6200ea;
+		}
+	}
+
+	button {
+		margin-top: 0.5rem;
+		padding: 12px;
+		background: #03dac6;
+		color: black;
+		border: none;
+		border-radius: 4px;
+		font-weight: bold;
+		cursor: pointer;
+
+		&:disabled {
+			background: #555;
+			color: #888;
+			cursor: not-allowed;
+		}
+	}
+}
+
+.error-msg {
+	color: #cf6679;
+	margin-top: 0.5rem;
+	font-size: 0.9rem;
+}

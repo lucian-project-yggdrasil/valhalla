@@ -1,0 +1,41 @@
+<section class="add-friend-section">
+	<!-- SCAN BUTTON -->
+	<div class="scan-area">
+		<label class="btn-scan" [class.disabled]="isAnalyzing()">
+			{{ isAnalyzing() ? "⚡ Analyzing..." : "⚡ Scan Card / Profile" }}
+			<input
+				type="file"
+				accept="image/*"
+				(change)="onFileSelected($event)"
+				[disabled]="isAnalyzing()"
+				hidden
+			/>
+		</label>
+	</div>
+
+	<!-- FORM -->
+	<div class="form-grid">
+		<input [(ngModel)]="name" placeholder="Name (Required)" [disabled]="isAnalyzing()" />
+		<input [(ngModel)]="email" placeholder="Email" [disabled]="isAnalyzing()" />
+		<input [(ngModel)]="tags" placeholder="Tags (comma separated)" [disabled]="isAnalyzing()" />
+		<textarea
+			[(ngModel)]="facts"
+			placeholder="Facts (one per line)"
+			rows="3"
+			[disabled]="isAnalyzing()"
+		>
+		</textarea>
+		<textarea
+			[(ngModel)]="notes"
+			placeholder="Context / Notes"
+			rows="2"
+			[disabled]="isAnalyzing()"
+		></textarea>
+
+		<button (click)="save()" [disabled]="!name || isAnalyzing()">Save to Valhalla</button>
+	</div>
+
+	@if (errorMessage()) {
+		<div class="error-msg">{{ errorMessage() }}</div>
+	}
+</section>

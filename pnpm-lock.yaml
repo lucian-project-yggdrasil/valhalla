@@ -28,7 +28,7 @@ importers:
         version: 21.0.3(@angular/common@21.0.3(@angular/core@21.0.3(@angular/compiler@21.0.3)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.0.3(@angular/compiler@21.0.3)(rxjs@7.8.2))(@angular/platform-browser@21.0.3(@angular/common@21.0.3(@angular/core@21.0.3(@angular/compiler@21.0.3)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.0.3(@angular/compiler@21.0.3)(rxjs@7.8.2)))(rxjs@7.8.2)
       '@lucian/runes':
         specifier: github:lucian-project-yggdrasil/runes#main
-        version: https://codeload.github.com/lucian-project-yggdrasil/runes/tar.gz/3dadb214946b932c8b7dcf402472aead78b43b15
+        version: https://codeload.github.com/lucian-project-yggdrasil/runes/tar.gz/7a03a387e46c956b2c67aba97fc1ef116362e786
       rxjs:
         specifier: ~7.8.2
         version: 7.8.2
@@ -81,19 +81,34 @@ importers:
       vitest:
         specifier: ^4.0.15
         version: 4.0.15(@types/node@20.19.26)(jsdom@27.3.0(postcss@8.5.6))(sass@1.93.2)
+      zod:
+        specifier: ^4.1.13
+        version: 4.1.13
 
   api:
     dependencies:
       '@azure/functions':
         specifier: ^4.0.0
         version: 4.10.0
+      '@azure/openai':
+        specifier: ^2.0.0
+        version: 2.0.0
       '@lucian/runes':
         specifier: github:lucian-project-yggdrasil/runes#main
-        version: https://codeload.github.com/lucian-project-yggdrasil/runes/tar.gz/3dadb214946b932c8b7dcf402472aead78b43b15
+        version: https://codeload.github.com/lucian-project-yggdrasil/runes/tar.gz/7a03a387e46c956b2c67aba97fc1ef116362e786
+      luxon:
+        specifier: ^3.7.2
+        version: 3.7.2
+      openai:
+        specifier: ^6.10.0
+        version: 6.10.0(ws@8.18.3)(zod@4.1.13)
       zod:
         specifier: ^4.1.13
         version: 4.1.13
     devDependencies:
+      '@types/luxon':
+        specifier: ^3.7.1
+        version: 3.7.1
       '@types/node':
         specifier: ^20.x
         version: 20.19.26
@@ -418,6 +433,10 @@ packages:
   '@azure/logger@1.3.0':
     resolution: {integrity: sha512-fCqPIfOcLE+CGqGPd66c8bZpwAji98tZ4JI9i/mlTNTlsIWslCfpg48s/ypyLxZTump5sypjrKn2/kY7q8oAbA==}
     engines: {node: '>=20.0.0'}
+
+  '@azure/openai@2.0.0':
+    resolution: {integrity: sha512-zSNhwarYbqg3P048uKMjEjbge41OnAgmiiE1elCHVsuCCXRyz2BXnHMJkW6WR6ZKQy5NHswJNUNSWsuqancqFA==}
+    engines: {node: '>=18.0.0'}
 
   '@babel/code-frame@7.27.1':
     resolution: {integrity: sha512-cjQ7ZlQ0Mv3b47hABuTevyTuYN4i+loJKGeV9flcCgIK37cCXRh+L1bd3iBHlynerhQ7BhCkn2BPbQUL+rGqFg==}
@@ -1128,8 +1147,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@lucian/runes@https://codeload.github.com/lucian-project-yggdrasil/runes/tar.gz/3dadb214946b932c8b7dcf402472aead78b43b15':
-    resolution: {tarball: https://codeload.github.com/lucian-project-yggdrasil/runes/tar.gz/3dadb214946b932c8b7dcf402472aead78b43b15}
+  '@lucian/runes@https://codeload.github.com/lucian-project-yggdrasil/runes/tar.gz/7a03a387e46c956b2c67aba97fc1ef116362e786':
+    resolution: {tarball: https://codeload.github.com/lucian-project-yggdrasil/runes/tar.gz/7a03a387e46c956b2c67aba97fc1ef116362e786}
     version: 1.0.0
 
   '@modelcontextprotocol/sdk@1.24.0':
@@ -1676,6 +1695,9 @@ packages:
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
+
+  '@types/luxon@3.7.1':
+    resolution: {integrity: sha512-H3iskjFIAn5SlJU7OuxUmTEpebK6TKB8rxZShDslBMZJ5u9S//KM1sbdAisiSrqwLQncVjnpi2OK2J51h+4lsg==}
 
   '@types/node@20.19.26':
     resolution: {integrity: sha512-0l6cjgF0XnihUpndDhk+nyD3exio3iKaYROSgvh/qSevPXax3L8p5DBRFjbvalnwatGgHEQn2R88y2fA3g4irg==}
@@ -2865,6 +2887,18 @@ packages:
   onetime@7.0.0:
     resolution: {integrity: sha512-VXJjc87FScF88uafS3JllDgvAm+c/Slfz06lorj2uAY34rlUu0Nt+v8wreiImcrgAjjIHp1rXpTDlLOGw29WwQ==}
     engines: {node: '>=18'}
+
+  openai@6.10.0:
+    resolution: {integrity: sha512-ITxOGo7rO3XRMiKA5l7tQ43iNNu+iXGFAcf2t+aWVzzqRaS0i7m1K2BhxNdaveB+5eENhO0VY1FkiZzhBk4v3A==}
+    hasBin: true
+    peerDependencies:
+      ws: ^8.18.0
+      zod: ^3.25 || ^4.0
+    peerDependenciesMeta:
+      ws:
+        optional: true
+      zod:
+        optional: true
 
   optionator@0.9.4:
     resolution: {integrity: sha512-6IpQ7mKUxRcZNLIObR0hz7lxsapSSIYNZJwXPGeF0mTVqGKFIXj1DQcMoT22S3ROcLyY/rz0PWaWZ9ayWmad9g==}
@@ -4108,6 +4142,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@azure/openai@2.0.0':
+    dependencies:
+      '@azure-rest/core-client': 2.5.1
+      tslib: 2.8.1
+    transitivePeerDependencies:
+      - supports-color
+
   '@babel/code-frame@7.27.1':
     dependencies:
       '@babel/helper-validator-identifier': 7.28.5
@@ -4672,7 +4713,7 @@ snapshots:
   '@lmdb/lmdb-win32-x64@3.4.3':
     optional: true
 
-  '@lucian/runes@https://codeload.github.com/lucian-project-yggdrasil/runes/tar.gz/3dadb214946b932c8b7dcf402472aead78b43b15':
+  '@lucian/runes@https://codeload.github.com/lucian-project-yggdrasil/runes/tar.gz/7a03a387e46c956b2c67aba97fc1ef116362e786':
     dependencies:
       '@azure/cosmos': 4.9.0
       luxon: 3.7.2
@@ -5115,6 +5156,8 @@ snapshots:
   '@types/estree@1.0.8': {}
 
   '@types/json-schema@7.0.15': {}
+
+  '@types/luxon@3.7.1': {}
 
   '@types/node@20.19.26':
     dependencies:
@@ -6476,6 +6519,11 @@ snapshots:
   onetime@7.0.0:
     dependencies:
       mimic-function: 5.0.1
+
+  openai@6.10.0(ws@8.18.3)(zod@4.1.13):
+    optionalDependencies:
+      ws: 8.18.3
+      zod: 4.1.13
 
   optionator@0.9.4:
     dependencies:
