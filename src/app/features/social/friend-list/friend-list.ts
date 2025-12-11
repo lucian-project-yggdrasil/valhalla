@@ -24,4 +24,15 @@ export class FriendListComponent implements OnInit {
 	getStatus(friend: Friend) {
 		return getRelationshipStatus(friend)
 	}
+
+	async logQuickInteraction(friend: Friend) {
+		const note = prompt(`Log interaction with ${friend.name}?`, "Caught up over coffee")
+		if (!note) return
+
+		try {
+			await this.friendService.logInteraction(friend.id!, "meet", note)
+		} catch {
+			alert("Failed to log.")
+		}
+	}
 }

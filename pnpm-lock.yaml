@@ -28,7 +28,7 @@ importers:
         version: 21.0.3(@angular/common@21.0.3(@angular/core@21.0.3(@angular/compiler@21.0.3)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.0.3(@angular/compiler@21.0.3)(rxjs@7.8.2))(@angular/platform-browser@21.0.3(@angular/common@21.0.3(@angular/core@21.0.3(@angular/compiler@21.0.3)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.0.3(@angular/compiler@21.0.3)(rxjs@7.8.2)))(rxjs@7.8.2)
       '@lucian/runes':
         specifier: github:lucian-project-yggdrasil/runes#main
-        version: https://codeload.github.com/lucian-project-yggdrasil/runes/tar.gz/7a03a387e46c956b2c67aba97fc1ef116362e786
+        version: https://codeload.github.com/lucian-project-yggdrasil/runes/tar.gz/24c30f7454122c130870f977c3e8840cd28018e7
       rxjs:
         specifier: ~7.8.2
         version: 7.8.2
@@ -95,7 +95,7 @@ importers:
         version: 2.0.0
       '@lucian/runes':
         specifier: github:lucian-project-yggdrasil/runes#main
-        version: https://codeload.github.com/lucian-project-yggdrasil/runes/tar.gz/7a03a387e46c956b2c67aba97fc1ef116362e786
+        version: https://codeload.github.com/lucian-project-yggdrasil/runes/tar.gz/24c30f7454122c130870f977c3e8840cd28018e7
       luxon:
         specifier: ^3.7.2
         version: 3.7.2
@@ -1147,8 +1147,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@lucian/runes@https://codeload.github.com/lucian-project-yggdrasil/runes/tar.gz/7a03a387e46c956b2c67aba97fc1ef116362e786':
-    resolution: {tarball: https://codeload.github.com/lucian-project-yggdrasil/runes/tar.gz/7a03a387e46c956b2c67aba97fc1ef116362e786}
+  '@lucian/runes@https://codeload.github.com/lucian-project-yggdrasil/runes/tar.gz/24c30f7454122c130870f977c3e8840cd28018e7':
+    resolution: {tarball: https://codeload.github.com/lucian-project-yggdrasil/runes/tar.gz/24c30f7454122c130870f977c3e8840cd28018e7}
     version: 1.0.0
 
   '@modelcontextprotocol/sdk@1.24.0':
@@ -4713,7 +4713,7 @@ snapshots:
   '@lmdb/lmdb-win32-x64@3.4.3':
     optional: true
 
-  '@lucian/runes@https://codeload.github.com/lucian-project-yggdrasil/runes/tar.gz/7a03a387e46c956b2c67aba97fc1ef116362e786':
+  '@lucian/runes@https://codeload.github.com/lucian-project-yggdrasil/runes/tar.gz/24c30f7454122c130870f977c3e8840cd28018e7':
     dependencies:
       '@azure/cosmos': 4.9.0
       luxon: 3.7.2

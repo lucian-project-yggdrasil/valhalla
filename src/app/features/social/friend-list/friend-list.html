@@ -11,9 +11,10 @@
 					<span class="name">{{ friend.name }}</span>
 					<span class="meta">{{ friend.email }}</span>
 				</div>
-				<span class="status" [class]="getStatus(friend)">
-					{{ getStatus(friend) }}
-				</span>
+				<div class="actions">
+					<span class="status" [class]="getStatus(friend)">{{ getStatus(friend) }}</span>
+					<button class="btn-icon" (click)="logQuickInteraction(friend)">✅</button>
+				</div>
 			</li>
 		} @empty {
 			<li class="empty-state">No friends recorded.</li>

@@ -19,16 +19,16 @@ export async function friends(request: HttpRequest): Promise<HttpResponseInit> {
 
 			case "POST": {
 				const body: unknown = await request.json()
-				const result = CreateFriendSchema.safeParse(body)
+				const validation = CreateFriendSchema.safeParse(body)
 
-				if (!result.success) {
-					Logger.warn("[API] Validation Failed", z.treeifyError(result.error))
-					return { status: 400, jsonBody: { error: z.treeifyError(result.error) } }
+				if (!validation.success) {
+					Logger.warn("[API] Validation Failed", z.treeifyError(validation.error))
+					return { status: 400, jsonBody: { error: z.treeifyError(validation.error) } }
 				}
 
 				const now = DateTime.now().toISO()
 				const saved = await repo.create({
-					...result.data,
+					...validation.data,
 					id: crypto.randomUUID(),
 					tenantId,
 					createdAt: now,
